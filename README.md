@@ -2,7 +2,7 @@
 
 ## Problem Statement :
 
-This project is for Boston House pricing prediction using Linear Regression and it's end to end execution using : EDA , model building , cocker , Git and Deployment to Heroku cloud .
+This project is for Boston House pricing prediction using Linear Regression and it's end to end execution using : EDA , model building , docker , Git and Deployment to Heroku cloud .
 
 ## Software & Tools requirements :
 
@@ -14,7 +14,7 @@ This project is for Boston House pricing prediction using Linear Regression and 
 
 4 . [GitClient](https://git-scm.com/downloads)
 
-## Steps :
+## Github , VS Code : Setup and Configuration
 
 1 . Do the "NL_LinearRegression.ipynb" file to produce the model files .
 
@@ -78,3 +78,56 @@ This project is for Boston House pricing prediction using Linear Regression and 
     ```bash
     git status   
     ``` 
+
+## Webapp Development by Flask API :
+
+
+* Create files required for Flask API Webapp Development , such as :
+
+```bash
+app.py
+templates/home.html
+```
+
+* Run app.py : It will generate below URL
+
+```bash
+127.0.0.1:5000/
+```
+
+* Check it's working on not
+
+## Execution of the Code via Post man :
+
+
+[Postman_download_link](https://www.postman.com/downloads/)
+
+
+* Open postman : APIs -> POST -> 127.0.0.1:5000/predict_api
+
+	* Body -> raw -> JSON
+        ```bash
+        {
+            "data":{
+            "CRIM":0.00632,
+            "ZN":18.0,
+            "INDUS":2.31,
+            "CHAS":0.0,
+            "NOX":0.538,
+            "RM":6.575,
+            "AGE":65.2,
+            "DIS":4.0900,
+            "RAD":1.0,
+            "TAX":296,
+            "PTRATIO":15.3,
+            "B":396.90,
+            "LSTAT":4.98
+            }
+        }
+        ```
+
+* If you click on Send , you shall get the result like below :
+	
+	```bash
+    30.086495760985294
+    ```
