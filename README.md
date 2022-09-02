@@ -63,7 +63,7 @@ This project is for Boston House pricing prediction using Linear Regression and 
 
 5 . Commit Codes to github :
 
-[Learn more on Gitcommands](https://www.atlassian.com/git/tutorials/setting-up-a-repository)
+Learn more on Git commands : [Git link](https://www.atlassian.com/git/tutorials/setting-up-a-repository)
 
 * Push file changes to Github
 
@@ -89,18 +89,24 @@ app.py
 templates/home.html
 ```
 
-* Run app.py : It will generate below URL
+* Run app.py : 
+
+```bash
+python app.py
+```
+
+* It will generate an URL as below : 
 
 ```bash
 127.0.0.1:5000/
 ```
 
-* Check it's working on not
+* Click on the URL above and check if it's working or not . If not fix the issues if any .
 
 ## Execution of the Code via Post man :
 
 
-[Postman_download_link](https://www.postman.com/downloads/)
+Postman Download Link : [download_link](https://www.postman.com/downloads/)
 
 
 * Open postman : APIs -> POST -> 127.0.0.1:5000/predict_api
@@ -131,3 +137,11 @@ templates/home.html
 	```bash
     30.086495760985294
     ```
+
+## Execution of the Code via web :
+
+* Click URL 127.0.0.1:5000/ , it will open browser .
+
+* Provide your input and click on Predict . 
+
+* It will show the result .
