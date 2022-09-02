@@ -176,3 +176,70 @@ web: gunicorn app:app
     * You can choose on the top right corner : More -> View logs . It will show the deployment status .
 
 * Open URL : https://price-prediction-dep.herokuapp.com/  , to see your application running .
+
+* In Postman check with URL : https://price-prediction-dep.herokuapp.com/predict_api
+
+
+## Dockerization :
+
+Any changes happen to the code automatically it should get deployed to Heroku . 
+
+* Create a file : Dockerfile and write  your code .
+
+* Docker helps you for configuration setups and deployment conflicts if any . 
+
+* After Dockerization , you can deploy your application anywhere like Cloud , your own OS .
+
+
+## Github Action settings :
+
+This will make the entire process to run as CI/CD pipeline - Build, Push and Release a Docker container to Heroku .
+
+* In project folder , create folder structure & file as below :
+
+```bash
+.github\workflows\main.yaml
+```
+
+* You need 3 things to be configured inside Github:
+
+```bash
+HEROKU_EMAIL
+HEROKU_API_KEY
+HEROKU_APP_NAME
+```
+
+* Above keys settings :
+
+    * Heroku -> Account settings -> API Key -> Reveal -> << Copy the code >>
+
+    * Github -> Github Repository -> Settings -> Secrets -> Actions -> New repository secret . Add below details : -> Add secret
+
+        ```bash
+        Name : HEROKU_API_KEY
+        Value : << Paste the code >>
+        ```
+
+    *  New repository secret . Add below details : -> Add secret
+
+        ```bash
+        Name : HEROKU_EMAIL
+        Value : << heroku email >>
+        ```
+
+    *  New repository secret . Add below details : -> Add secret
+
+        ```bash
+        Name : HEROKU_APP_NAME
+        Value : << heroku app-name >>
+        ```    
+
+## Final Step of execution :
+
+* Commit the VS code changes to Github
+
+    ```bash
+    git add .
+    git commit -m "added Dockerfile , main.yaml file"
+    git push origin main
+    ```
