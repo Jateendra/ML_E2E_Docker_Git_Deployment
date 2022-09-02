@@ -234,7 +234,7 @@ HEROKU_APP_NAME
         Value : << heroku app-name >>
         ```    
 
-## Final Step of execution :
+## Final Step of Deployment :
 
 * Commit the VS code changes to Github
 
@@ -243,3 +243,5 @@ HEROKU_APP_NAME
     git commit -m "added Dockerfile , main.yaml file"
     git push origin main
     ```
+
+* The entire process is running in Docker container .     
