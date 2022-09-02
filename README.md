@@ -145,3 +145,34 @@ Postman Download Link : [download_link](https://www.postman.com/downloads/)
 * Provide your input and click on Predict . 
 
 * It will show the result .
+
+## Deployment to Cloud Application Platform - Heroku :
+
+
+1 . Create Procfile in the project directory . This provides command execution direction for Heroku .
+
+```bash
+web: gunicorn app:app
+```
+
+2 . Open Heroku : [Link](https://dashboard.heroku.com/login) and Navigate 
+
+* New -> Create New App -> App Name ( price-prediction-dep ) -> Create App
+
+* Deployment method : Github
+
+* Connect to Github : Connect to Github -> Authorize Heroku to connect to Github
+
+* Provide repo-name -> Search -> Connect
+
+    * Notes : You can choose "Enable Automatic Deploys" 
+
+* Manual deploy -> Deploy Branch
+
+    * It will show you the message : "Your app was successfully deployed"
+
+    OR
+
+    * You can choose on the top right corner : More -> View logs . It will show the deployment status .
+
+* Open URL : https://price-prediction-dep.herokuapp.com/  , to see your application running .
